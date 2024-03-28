@@ -1,38 +1,51 @@
 .App {
-  text-align: center;
+  display: grid;
+  justify-content: center; /* Centrer horizontalement */
+  margin-top: 33vh;
+  grid-template-columns: repeat(3, 100px); /* Trois colonnes de 100px */
+  grid-template-rows: repeat(3, 100px); /* Trois lignes de 100px */
+  gap: 10px; /* Espacement entre les cellules */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.drum-pad {
+  border: 1px solid black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#drum-Q {
+  grid-area: 1 / 1 / 2 / 2; /* Emplacement de la cellule Q */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#drum-W {
+  grid-area: 1 / 2 / 2 / 3; /* Emplacement de la cellule W */
+}
+
+#drum-E {
+  grid-area: 1 / 3 / 2 / 4; /* Emplacement de la cellule E */
+}
+
+#drum-A {
+  grid-area: 2 / 1 / 3 / 2; /* Emplacement de la cellule A */
+}
+
+#drum-S {
+  grid-area: 2 / 2 / 3 / 3; /* Emplacement de la cellule S */
+}
+
+#drum-D {
+  grid-area: 2 / 3 / 3 / 4; /* Emplacement de la cellule D */
+}
+
+#drum-Z {
+  grid-area: 3 / 1 / 4 / 2; /* Emplacement de la cellule Z */
+}
+
+#drum-X {
+  grid-area: 3 / 2 / 4 / 3; /* Emplacement de la cellule X */
+}
+
+#drum-C {
+  grid-area: 3 / 3 / 4 / 4; /* Emplacement de la cellule C */
 }
